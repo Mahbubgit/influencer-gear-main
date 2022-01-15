@@ -7,9 +7,7 @@
 /*      For Poppins-700 Font      */
 /**********************************/
 
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
-
 
 *{
     margin: 0;
@@ -58,19 +56,17 @@
 .container{
     position: relative;
     margin: 145px 120px;
-    width: 90%;
+    width: 100%;
     height: 36px;
     align-items: center;
     justify-content: space-between;
 }
 .top-section{
     display: flex;
+    width: 90%;
 }
 .section-title{
-    /* margin: 285px 740px 170px 120px; */
     flex: 1;
-    
-    
 }
 .section-title h1{
     font-size: 52px;
@@ -93,39 +89,6 @@
     object-fit: cover;    
 }
 
-/* .image-content{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 16px;
-    font-weight: 700;
-    color: #9541e4;
-    padding-left: 100px;
-    transition: .7s ease-out;
-    transform: translateY(300px);
-}
-
-.section-image img:hover{
-    display: block;
-} */
-/* .img:hover .image-content{
-    transform: translateY(180px);
-    display: none;
-}
-
-.img::before{
-    content: "";
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, .5);
-    top: 0;
-    left: 0;
-    position: absolute;
-    opacity: 0;
-    transition: .3s linear;
-}
-.img:hover::before{
-    opacity: 1;
-} */
-
 .btn{
     font-size: 16px;
     width: 196px;
@@ -144,12 +107,12 @@
 /**********************************/
 
 .logo-section{
-    /* position: relative; */
     margin: 100px 45px;
     border: 1px solid lightgray;
     height: 110px;
     width: 1110px;
-    
+    border-left: none;
+    border-right: none;
 }
 .logos{
     display: flex;
@@ -159,19 +122,13 @@
     cursor: pointer;
 }
 
-
 /* ********************************/
 /* For Popular Collection Section */
 /**********************************/
 
 .popular-collecion{
     position: relative;
-    /* margin: 100px 196px; */
-    margin: 10px 196px 10px 30px;
-    width: 90%;
-    /* height: 36px; */
-    /* align-items: center; */
-    /* justify-content: space-between; */
+    width: 80%;
 }
 
 .collection-header-title{
@@ -183,14 +140,12 @@
 .collections{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-
-    /* grid-gap: 30px; */
 }
 .collection{
     width: 330px;
     height: 480px;
     background-color: #FFFFFF;
-    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     border-radius: 5px;
     margin: 15px 15px;
 }
@@ -225,6 +180,96 @@
     color: #787885;
 }
 
+.see-more{
+    font-size: 14px;
+    color: #E02C6D;
+    margin: 20px 0 25px 1100px;
+}
 /* ********************************/
 /*        For Footer Section      */
 /**********************************/
+
+.footer-area{
+    width: 100%;
+    background-color: #00001a;
+    
+    color: white;
+    height: 150px;
+    align-items: center;
+    text-align: center;
+    padding-top: 50px;
+    margin-left: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.footer-title{
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    color: #FFFFFF;
+}
+.copyright-content{
+    color: #D9DBE1;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+}
+.social-links{
+    display: flex;
+    color: #D9DBE1;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    padding-left: 750px;
+    
+}
+.social-link a{
+    color: #D9DBE1;
+    font-size: 14px;
+    width: 15px;
+    margin: 0 5px;
+}
+
+/* ********************************/
+/*   For Media Query Section      */
+/**********************************/
+
+/* For Mobile Devices */
+
+@media only screen and (max-width: 688px){
+    .container{
+        width: 100%;
+    }
+    .top-section{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .section-title, .section-image{
+        flex-direction: column;
+        align-items: center; 
+    }
+    /* .top-section, .logo-section, .popular-collecion{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .section-title, .section-image, .logos, .collection{
+        flex-direction: column;
+        align-items: center; 
+    } */
+    
+}
+
+/* For Tablet devices */
+
+@media only screen and (min-width: 688px) and (max-width: 992px) {
+    .container{
+        width: 100%;
+    }
+
+    .top-section, .logo-section, .popular-collecion{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .section-title, .section-image, .logos, .collection{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+}
