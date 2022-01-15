@@ -241,20 +241,14 @@
     .container{
         width: 100%;
     }
-    .top-section{
-        grid-template-columns: repeat(1, 1fr);
-    }
-    .section-title, .section-image{
-        flex-direction: column;
-        align-items: center; 
-    }
-    /* .top-section, .logo-section, .popular-collecion{
+    
+    .top-section, .logo-section, .popular-collecion{
         grid-template-columns: repeat(1, 1fr);
     }
     .section-title, .section-image, .logos, .collection{
         flex-direction: column;
         align-items: center; 
-    } */
+    }
     
 }
 
